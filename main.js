@@ -6,7 +6,7 @@ var ColorRow = document.getElementById("ColorRow");
 var Colors = [];
 
 AddColorBtn.addEventListener('click', () => {
-    if(ColorInput.value!=""){
+    if(ColorInput.value!=""&&Colors.includes(ColorInput.value)==false){
         ColorRow.innerHTML += `<div class="col-lg-2 SizeItem">
         <input type="text" disabled value="${ColorInput.value}">
         <button class="btn RemoveBtn">x</button>
@@ -41,7 +41,8 @@ var AddSizeBtn = document.getElementById("AddSizeBtn");
 var SizeRow = document.getElementById("SizeRow");
 
 AddSizeBtn.addEventListener('click', () => {
-    if(SizeInput.value!=""){
+    console.log();
+    if(SizeInput.value!=""&&Sizes.includes(SizeInput.value)==false){
             SizeRow.innerHTML += `<div class="col-lg-2 SizeItem">
             <input type="text" disabled value="${SizeInput.value}">
             <button class="btn RemoveBtn">x</button>
