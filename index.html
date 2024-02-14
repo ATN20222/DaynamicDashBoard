@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"> 
+                <label for="color">color</label>
+                <input id="color" name="color" type="checkbox" Alive="true">
+            </div>
+            <div class="col-lg-1"> 
+                <label for="size">size</label>
+                <input  id="size" name="size" type="checkbox" Alive="true">
+            </div>
+        </div>  
+        <button class="btn btn-primary" id="SaveVariations">Save Changes</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-12 Variance">
+                <label for="Color">Color</label>
+                <input id="ColorInput" type="text">
+                <button class="btn btn-primary" id="AddColorBtn">Add Color</button>
+                <div id="ColorRow" class="row">
+                    
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">
+                <label for="Size">Size</label>
+                <input id="SizeInput" type="text">
+                <button class="btn btn-primary" id="AddSizeBtn">Add Size</button>
+                <div id="SizeRow" class="row">
+                    <!-- <button class="btn RemoveBtn" onclick="RemoveItem()">x</button> -->
+                    
+                    
+                </div>
+            </div>
+
+            <div>
+                <button class="btn btn-primary" id="SaveVariationsItems">Save Changes</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <button class="btn btn-primary" id="AddRecordBtn">Add record</button> -->
+    <div class="container">
+        <table id="Table">
+            <!-- <tr class="TableRow">
+                <td> 
+                    <label for="">Price</label>
+                    <input type="text" class="form-control">
+                </td>
+            </tr> -->
+        </table>
+    </div>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
