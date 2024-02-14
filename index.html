@@ -11,17 +11,20 @@
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row VariationsRow CenterFlex">
+            <h1 class="CenterFlex">Variations</h1>
             <div class="col-lg-1"> 
                 <label for="color">color</label>
-                <input id="color" name="color" type="checkbox" Alive="true">
+                <input class="ColorCheckBox" id="color" name="color" type="checkbox" Alive="true">
             </div>
             <div class="col-lg-1"> 
                 <label for="size">size</label>
-                <input  id="size" name="size" type="checkbox" Alive="true">
+                <input class="SizeCheckBox" id="size" name="size" type="checkbox" Alive="true">
             </div>
         </div>  
-        <button class="btn btn-primary" id="SaveVariations">Save Changes</button>
+        <div class="EndFlex">
+            <button class="btn btn-dark" id="SaveVariations">Save Variations </button>
+        </div>
 
     </div>
 
@@ -31,20 +34,20 @@
     <div class="container">
         <div class="row">
             
-            <div class="col-lg-12 Variance">
+            <div class="col-lg-12 Variance ColorVar">
                 <label for="Color">Color</label>
                 <input id="ColorInput" type="text">
-                <button class="btn btn-primary" id="AddColorBtn">Add Color</button>
+                <button class="btn btn-dark" id="AddColorBtn">Add Color</button>
                 <div id="ColorRow" class="row">
                     
                 </div>
             </div>
 
 
-            <div class="col-lg-12">
+            <div class="col-lg-12 SizeVar">
                 <label for="Size">Size</label>
                 <input id="SizeInput" type="text">
-                <button class="btn btn-primary" id="AddSizeBtn">Add Size</button>
+                <button class="btn btn-dark" id="AddSizeBtn">Add Size</button>
                 <div id="SizeRow" class="row">
                     <!-- <button class="btn RemoveBtn" onclick="RemoveItem()">x</button> -->
                     
@@ -52,8 +55,8 @@
                 </div>
             </div>
 
-            <div>
-                <button class="btn btn-primary" id="SaveVariationsItems">Save Changes</button>
+            <div class="EndFlex">
+                <button class="btn btn-dark " id="SaveVariationsItems">Save Items</button>
             </div>
 
         </div>
@@ -61,14 +64,29 @@
 
     <!-- <button class="btn btn-primary" id="AddRecordBtn">Add record</button> -->
     <div class="container">
-        <table id="Table">
-            <!-- <tr class="TableRow">
-                <td> 
-                    <label for="">Price</label>
-                    <input type="text" class="form-control">
-                </td>
-            </tr> -->
-        </table>
+        <form action="">
+        
+            <table id="Table" class="table">
+                <thead class="thead-dark">
+                    <tr>
+                    <th scope="col">variation</th>
+                    <th scope="col">SKU</th>
+                    
+                    </tr>
+
+                </thead>
+                
+                <!-- <tr class="TableRow">
+                    <td> 
+                        <label for="">Price</label>
+                        <input type="text" class="form-control">
+                    </td>
+                </tr> -->
+            </table>
+            <div class="EndFlex">
+                <input type="submit" style="width:500px !important"  class="btn btn-dark " id="Save Products" value="Save Products">
+            </div>
+        </form>
     </div>
     
     <script src="main.js"></script>

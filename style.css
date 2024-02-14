@@ -24,12 +24,7 @@ input{
     border-radius: 5px; */
 
 }
-input:focus{
-    /* outline: blue; */
-    /* border: 2px solid blue; */
 
-
-}
 .SizeItem{
     padding: 10px;
     position: relative;
@@ -41,4 +36,42 @@ input:focus{
     /* top:10px; */
     top: 4px;
     right: 10px;
+}
+.ColorVar{
+    display: none;
+}
+.SizeVar{
+    display: none;
+}
+#SaveVariationsItems{
+    display: none;
+}
+input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 14px;
+}
+.Show{
+    display: block !important;
+}
+.VariationsRow .col-lg-1{
+
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+h1{
+    margin-top: 50px !important;
+}
+.CenterFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EndFlex{
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }

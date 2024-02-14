@@ -1,3 +1,24 @@
+var ColorCheckBox = document.querySelector(".ColorCheckBox");
+var SizeCheckBox = document.querySelector(".SizeCheckBox");
+var ColorVar = document.querySelector(".ColorVar");
+var SizeVar = document.querySelector(".SizeVar");
+var SaveVariationsItems  = document.getElementById("SaveVariationsItems");
+
+window.onload = () => {
+    if(SizeCheckBox.attributes.getNamedItem("checked")){
+        SizeVar.classList.add("Show");
+        SaveVariationsItems.classList.add("Show");
+        // console.log(SizeVar.classList);
+    }
+    if(ColorCheckBox.attributes.getNamedItem("checked")){
+        ColorVar.classList.add("Show");
+        SaveVariationsItems.classList.add("Show");
+        // console.log(SizeVar.classList);
+    }
+        
+        
+  };
+
 var table = document.getElementById("Table");
 var ColorInput = document.getElementById("ColorInput");
 var AddColorBtn = document.getElementById("AddColorBtn");
@@ -6,7 +27,7 @@ var ColorRow = document.getElementById("ColorRow");
 var Colors = [];
 
 AddColorBtn.addEventListener('click', () => {
-    if(ColorInput.value!=""&&Colors.includes(ColorInput.value)==false){
+    if(ColorInput.value.split(' ').join('')!=""&&Colors.includes(ColorInput.value)==false){
         ColorRow.innerHTML += `<div class="col-lg-2 SizeItem">
         <input type="text" disabled value="${ColorInput.value}">
         <button class="btn RemoveBtn">x</button>
@@ -42,7 +63,7 @@ var SizeRow = document.getElementById("SizeRow");
 
 AddSizeBtn.addEventListener('click', () => {
     console.log();
-    if(SizeInput.value!=""&&Sizes.includes(SizeInput.value)==false){
+    if(SizeInput.value.split(' ').join('')  !=""&&Sizes.includes(SizeInput.value)==false){
             SizeRow.innerHTML += `<div class="col-lg-2 SizeItem">
             <input type="text" disabled value="${SizeInput.value}">
             <button class="btn RemoveBtn">x</button>
@@ -101,15 +122,21 @@ let combinations = [];
 
 console.log(combinations);
 combinations.forEach((ele)=>{
-    
+    ;
     if (!document.getElementById(`${ele}tr`)) {
         table.innerHTML += `<tr class="TableRow" id="${ele}tr" style="padding:10px;">
-            <td style="padding:20px"> 
+            <td scope="col" style="padding:20px"> 
                 <label for="${ele}" name="${ele}">${ele}</label>
-                <input id="${ele}" type="text" class="">
+                <input type="hidden" value="${ele}">
             </td>
+            <td scope="col" style="padding:20px">
+            <label for="${ele+'SKU'}" name="${ele+'SKU'}"></label>
+                <input id="${ele+'SKU'}" type="text" class="">
+            </td>
+            
         </tr>`;
 }
 });
+
 
 });
