@@ -6,6 +6,15 @@
 .Variance{
     margin: 10px;
 }
+.VariationSection{
+    display: none;
+}
+.variantCol{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .Table{
     margin-top: 20px;
@@ -14,8 +23,7 @@
 .TableRow{
     margin: 10px;
 }
-
-input{
+.boxes{
     max-width: 100px;
     /* padding: 2px;
     padding-left: 5px;
@@ -23,6 +31,12 @@ input{
     border: 2px solid black;
     border-radius: 5px; */
 
+}
+#AddVariationOption{
+    margin-right: 10px;
+}
+.VariationsBtns{
+    order: 10000;
 }
 
 .SizeItem{
@@ -52,7 +66,7 @@ input[type="submit"]{
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 .Show{
     display: block !important;
@@ -61,9 +75,6 @@ input[type="submit"]{
 
     margin-top: 40px !important;
     margin-bottom: 40px !important;
-}
-h1{
-    margin-top: 50px !important;
 }
 .CenterFlex{
     display: flex;

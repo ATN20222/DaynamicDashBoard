@@ -11,84 +11,129 @@
 <body>
 
     <div class="container">
-        <div class="row VariationsRow CenterFlex">
-            <h1 class="CenterFlex">Variations</h1>
-            <div class="col-lg-1"> 
-                <label for="color">color</label>
-                <input class="ColorCheckBox" id="color" name="color" type="checkbox" Alive="true">
-            </div>
-            <div class="col-lg-1"> 
-                <label for="size">size</label>
-                <input class="SizeCheckBox" id="size" name="size" type="checkbox" Alive="true">
-            </div>
-        </div>  
-        <div class="EndFlex">
-            <button class="btn btn-dark" id="SaveVariations">Save Variations </button>
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-
-    <div class="container">
         <div class="row">
-            
-            <div class="col-lg-12 Variance ColorVar">
-                <label for="Color">Color</label>
-                <input id="ColorInput" type="text">
-                <button class="btn btn-dark" id="AddColorBtn">Add Color</button>
-                <div id="ColorRow" class="row">
-                    
-                </div>
+            <div class="col-lg-12 Add variantCol">
+                <h1>Variations</h1>
+                <button class="btn" id="EnableVariationsBtn">Add variant</button>
             </div>
-
-
-            <div class="col-lg-12 SizeVar">
-                <label for="Size">Size</label>
-                <input id="SizeInput" type="text">
-                <button class="btn btn-dark" id="AddSizeBtn">Add Size</button>
-                <div id="SizeRow" class="row">
-                    <!-- <button class="btn RemoveBtn" onclick="RemoveItem()">x</button> -->
-                    
-                    
-                </div>
-            </div>
-
-            <div class="EndFlex">
-                <button class="btn btn-dark " id="SaveVariationsItems">Save Items</button>
-            </div>
-
         </div>
-    </div>
-
-    <!-- <button class="btn btn-primary" id="AddRecordBtn">Add record</button> -->
-    <div class="container">
-        <form action="">
-        
-            <table id="Table" class="table">
-                <thead class="thead-dark">
-                    <tr>
-                    <th scope="col">variation</th>
-                    <th scope="col">SKU</th>
-                    
-                    </tr>
-
-                </thead>
-                
-                <!-- <tr class="TableRow">
-                    <td> 
-                        <label for="">Price</label>
-                        <input type="text" class="form-control">
-                    </td>
-                </tr> -->
-            </table>
-            <div class="EndFlex">
-                <input type="submit" style="width:500px !important"  class="btn btn-dark " id="Save Products" value="Save Products">
-            </div>
-        </form>
     </div>
     
+<hr>
+    <section class="VariationSection Show">
+<!--         
+        <div class="container">
+        
+            <div class="row VariationsRow CenterFlex">
+    
+                <div class="col-lg-1"> 
+                    <label for="color">color</label>
+                    <input class="ColorCheckBox"  name="color" type="checkbox" Alive="true">
+                </div>
+                <div class="col-lg-1"> 
+                    <label for="size">size</label>
+                    <input  checked  name="size" type="checkbox" Alive="true">
+                </div>
+            </div>  
+            
+    
+        </div> -->
+    
+        <br>
+        <br>
+    
+        <div class="container">
+            <div class="row OptionsRow">
+                <div class="col-lg-12 OpationContainer">
+                    <div class="row">
+                        <div class="col-lg-3 Options-Col-Name">
+                            <label for="">Option name</label>
+                            <select type="text" class="form-control VarList">
+                                <option value="1" id="color" class="ColorCheckBox">Color</option>
+                                <option value="2" id="size" class="SizeCheckBox" >Size</option>
+                            </select>
+                        </div>
+        
+                        <div class="col-lg-7 Options-Col-Values">
+                            <label for="">Option Values</label>
+                            <input type="text" class="form-control OptionInput">
+                        </div>
+                        <div class="col-lg-1 CenterFlex align-items-end">
+                            <button class="btn btn-dark AddOptionBtn" id="AddOptionBtn">Add</button>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div id="ColorRow" class="row OptionsValuesRow">
+                                
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                
+
+                <div class="col-lg-12 EndFlex VariationsBtns" style="margin-top: 20px;">
+                    <button class="btn btn-dark" id="AddVariationOption">Add another option</button>
+                    <button class="btn btn-dark" id="SaveVariations">Save Variations</button>
+                </div>
+                    
+                
+                <div class="col-lg-12 Variance ColorVar">
+                    <label for="Color">Color</label>
+                    <input id="ColorInput" type="text">
+                    <button class="btn btn-dark" id="AddColorBtn">Add Color</button>
+                    
+                </div>
+    
+    
+                <div class="col-lg-12 SizeVar">
+                    <label for="Size">Size</label>
+                    <input id="SizeInput" type="text">
+                    <button class="btn btn-dark" id="AddSizeBtn">Add Size</button>
+                    <!-- <div id="SizeRow" class="row">
+                        <button class="btn RemoveBtn" onclick="RemoveItem()">x</button>
+                        
+                        
+                    </div> -->
+                </div>
+    
+                <div class="EndFlex">
+                    <button class="btn btn-dark " id="SaveVariationsItems">Save Items</button>
+                </div>
+    
+            </div>
+        </div>
+    
+        <!-- <button class="btn btn-primary" id="AddRecordBtn">Add record</button> -->
+        <div class="container">
+            <form action="">
+            
+                <table id="Table" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">variation</th>
+                        <th scope="col">SKU</th>
+                        
+                        </tr>
+    
+                    </thead>
+                    
+                    <!-- <tr class="TableRow">
+                        <td> 
+                            <label for="">Price</label>
+                            <input type="text" class="form-control">
+                        </td>
+                    </tr> -->
+                </table>
+                <div class="EndFlex">
+                    <input type="submit" style="width:150px !important"  class="btn btn-dark " id="Save Products" value="Save Products">
+                </div>
+            </form>
+        </div>
+        
+    </section>
+
     <script src="main.js"></script>
 
 </body>

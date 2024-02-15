@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Next Div Example</title>
+</head>
+<body>
+
+<div id="container">
+  <div class="span1ct">
+    <span class="span1">This is a span</span>
+  </div>
+  <div class="span2ct">
+    <span class="span2"></span>
+  </div>
+</div>
+
+<script>
+    var span1ct = document.querySelector(".span2");
+    var nextEle = span1ct.closest("div");
+    console.log(nextEle.previousElementSibling);
+</script>
+
+</body>
+</html>
