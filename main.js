@@ -11,6 +11,8 @@ EnableVariationsBtn.addEventListener('click' , ()=>{
 });
 
 
+
+
 var OptionsObj = {
     options :[
         {
@@ -40,6 +42,11 @@ var ColorVar = document.querySelector(".ColorVar");
 var SizeVar = document.querySelector(".SizeVar");
 var SaveVariationsItems  = document.getElementById("SaveVariationsItems");
 var Colors=[];
+
+
+
+
+
 AddVariationOption.addEventListener('click', () => {
     var ClonedOpationContainer = OpationContainer.cloneNode(true);
 
