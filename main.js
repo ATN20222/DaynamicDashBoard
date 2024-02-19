@@ -36,23 +36,37 @@ AddOptionBtn.addEventListener('click',()=>{
             
             var nextEle = AddOptionBtn.parentElement;
             var PrevParent = nextEle.previousElementSibling;
+            var PrevParentP= PrevParent.previousElementSibling;
+
             var PrevOpt = PrevParent.previousElementSibling;
-            var PrvSelectedVar = PrevOpt.querySelector('.VarList').value;
+            var PrevInputValue = PrevParentP.querySelector('.OptionInput');
+            var ArabicInputvalue =PrevParent.querySelector(".OptionInputAr") ;
+            console.log(ArabicInputvalue.value);
+                
+            // var PrvSelectedVar = PrevOpt.querySelector('.VarList').value;
             
-            var PrevInputValue = PrevParent.querySelector('.OptionInput');
+            // var PrevInputValue = PrevParent.querySelector('.OptionInput');
             
             
 
             var OptionsValuesRow = nextEle.nextElementSibling.querySelector(".row");
             
-                if(PrevInputValue.value.split(' ').join('')!=""&&Colors.includes(PrevInputValue.value)==false){
-                    OptionsValuesRow.innerHTML += `<div class="col-lg-2 SizeItem">
-                    <input type="text" disabled value="${PrevInputValue.value}">
-                    <button class="btn RemoveBtn">x</button>
-                </div>`
-                PrevInputValue.value="";
-                    Colors.push(PrevInputValue.value);
-                }
+            if(
+                (PrevInputValue.value.split(' ').join('')!=""
+                &&Colors.includes(PrevInputValue.value)==false)
+                ||
+                (ArabicInputvalue.value.split(' ').join('')!=""
+                &&Colors.includes(ArabicInputvalue.value)==false)
+                ){
+                OptionsValuesRow.innerHTML += `<div class="col-lg-2 SizeItem">
+                <input type="text" disabled value="${PrevInputValue.value+'-'+ArabicInputvalue.value}">
+                <button class="btn RemoveBtn">x</button>
+            </div>`
+            PrevInputValue.value="";
+            ArabicInputvalue.value="";
+                Colors.push(PrevInputValue.value);
+            }
+            
                 
 
                 
@@ -96,20 +110,30 @@ AddOptionBtn.addEventListener('click',()=>{
             AddOpBtn.addEventListener('click' , () => {
                 var nextEle = AddOpBtn.closest("div");
                 var PrevParent = nextEle.previousElementSibling;
+                var PrevParentP= PrevParent.previousElementSibling;
                 var PrevOpt = PrevParent.previousElementSibling;
-                var PrvSelectedVar = PrevOpt.querySelector('.VarList').value;
+                // var PrvSelectedVar = PrevOpt.querySelector('.VarList').value;
                 
-                var PrevInputValue = PrevParent.querySelector('.OptionInput');
+                var PrevInputValue = PrevParentP.querySelector('.OptionInput');
+                var ArabicInputvalue =PrevParent.querySelector(".OptionInputAr") ;
+                console.log(ArabicInputvalue.value);
                 
                 
     
                 var OptionsValuesRow = nextEle.nextElementSibling.querySelector(".row");
                 
-                    if(PrevInputValue.value.split(' ').join('')!=""&&Colors.includes(PrevInputValue.value)==false){
+                    if(
+                        (PrevInputValue.value.split(' ').join('')!=""
+                        &&Colors.includes(PrevInputValue.value)==false)
+                        ||
+                        (ArabicInputvalue.value.split(' ').join('')!=""
+                        &&Colors.includes(ArabicInputvalue.value)==false)
+                        ){
                         OptionsValuesRow.innerHTML += `<div class="col-lg-2 SizeItem">
-                        <input type="text" disabled value="${PrevInputValue.value}">
+                        <input type="text" disabled value="${PrevInputValue.value+'-'+ArabicInputvalue.value}">
                         <button class="btn RemoveBtn">x</button>
                     </div>`
+                    ArabicInputvalue.value="";
                     PrevInputValue.value="";
                         Colors.push(PrevInputValue.value);
                     }
